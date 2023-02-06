@@ -19,6 +19,18 @@ void reverseArray(int arr[], int n)
     printArray(rarr, n);
 }
 
+void reverseRecurseArray(int arr[], int start, int end)
+{
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
 int main()
 {
     int n, arr[n];
@@ -58,6 +70,10 @@ int main()
 
     // using functions
     // reverseArray(arr, n);
+
+    // using another string reversal methods
+    reverseRecurseArray(arr, 0, n - 1);
+    printArray(arr, n);
 
     // using recursion
 
